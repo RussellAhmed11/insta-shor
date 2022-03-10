@@ -45,13 +45,11 @@ const switchTab = (id) => {
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
-
         displayReportedPosts();
     }
 };
 
 const createPost = (post) => {
-    // console.log(post?.description)
     const userImage=post.userImage;
     const image = post.image;
     const div = document.createElement( "article" );
