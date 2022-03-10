@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-    likedPostsId.plus(id); 
+    likedPostsId.push(id); 
     showPosts(posts);
 };
 
@@ -51,6 +51,8 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
+    // console.log(post?.comments[0].text)
+    const userImage=post.userImage;
     const image = post.image;
     const div = document.createElement( "article" );
     div.classList.add( "post" );
@@ -59,10 +61,10 @@ const createPost = (post) => {
                 <div class="post__profile">
                   <a
                     href="https://github.com/ProgrammingHero1"
-                    target="_blank"
+                    // target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image}" alt="User Picture" />
+                    <img src="${userImage}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
@@ -120,9 +122,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post?.comments[0]?.user}
                       </a>
-                      ${post.comments?.text}
+                      ${post?.comments[0]?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
