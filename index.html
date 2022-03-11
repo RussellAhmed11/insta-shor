@@ -77,11 +77,12 @@
                 <h1>Reported posts</h1>
             </div>
         </main>
-        <section class="container mt-3">
+        <section class="mt-3 p-3 border border-dark container" >
             <h3>How does javascript work?</h3>
             <p>Javascript  is called client-side scripting language. That means its runs an internet browser.javascript working process is very interesting.when the browser loads has the page, the browser has a built  in interpret  that reads the javascript  code it finds in the page and runs it.javascript controls the dynamic  elements  of web pages.It works in web browser  and more on web servers as well. Application programing interferes (API) are also supported by javascript, giving us more functionality.When a page loaded firistly load html then css and finally javascript.The order here is important. If the JavaScript did not wait for the HTML and CSS to finish, it would not be able to change the DOM elements.</p>
             <h3>What does javascript event loop do?</h3>
-            <h3>What is the different between local storage vs Session storage?</h3>
+            <P>The event loop is the secret behind JavaScript's asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading.Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation. An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.    Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
+            The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.</P>
         </section>
         <footer></footer>
 
